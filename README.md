@@ -5,8 +5,6 @@ How to add class to the element in the viewport and how to remove it
 ```javascript
 document.addEventListener('scroll', myFunction);
 function myFunction() {
-  var div = document.getElementById("myDiv");
-  var div1 = document.getElementById("myDiv1");
   var allElements = document.querySelectorAll('.help');
   var elmIndex = 1;
   for (var i=0; i < allElements.length; i++) {
@@ -28,3 +26,9 @@ function myFunction() {
   
 }
 ```
+
+طول ما react.top 
+= 0 (اول المكان اللي بادي منه الحدث بيختلف بحاجة زي margin)
+او اصغر من - طول العنصر السالب يبقي العنصر ده 
+جوه viewport
+
