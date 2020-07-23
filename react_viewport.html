@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  box-sizing: border-box;
+}
+
+.green {
+  background-color: crimson;
+}
+</style>
+
+</head>
+
+<body>
+<!--
+<div id="cont" style="height:200px; width:300px; overflow:auto;margin:0px;"> -->
+<div id="myDiv" class="help" title="in viewport" style="width:250px; border:1px solid red;">
+Return the top-left corner of this element relative to the top left corner of the viewport with the button below.<br>
+Also try to use the scrollbars to test the method for different positions.
+ corner of the viewport with the button below.<br>
+Also try to use the scrollbars to teReturn the top-left corner of this element relative to the top left corner of the viewport with the button below.<br>
+Also try to use the scrollbars to test the method for different positions.
+ corner of the viewport with the button below.<br>
+Also try to use the scrollbars to test tReturn the top-left corner of this element relative to the top left corner of the viewport with the button below.<br>
+Also try to use the scrollbars to test the method for different positions.
+ corner of the viewport with the button below.<br>
+Also try to use the scrollbars to test the method for different positions.
+ corner of the viewport with the button below.<br>
+Also try to use the scrollbars to test the method for different positions.
+he method for different positions.
+ corner of the viewport with the button below.<br>
+Also try to use the scrollbars to test the method for different positions.
+st the method for different positions.
+ corner of the viewport with the buReturn the top-left corner of this element relative to the top left corner of the viewport with the button below.<br>
+Also try to use the scrollbars to test the method for different positions.
+ corner of the viewport with the button below.<br>
+Also try to use the scrollbars to test the method for different positions.
+ corner of the viewport with the button below.<br>
+Also try to use the scrollbars to test the method for different positions.
+tton below.<br>
+Also try to use the scrollbars to test the method for different positions.
+</div>
+<div id="myDiv1" data="elm2" title="in viewport" class="help" style="width:250px; border:1px solid red;">
+Return the top-left corner of this element relative to the top left corner of the viewport with the buReturn the top-left corner of this element relative to the top left corner of the viewport with the button below.<br>
+Also try to use the scrollbars to test the method for different positions.
+ corner of the viewport with the button below.<br>
+Also try to use the scrollbars to test the method for different positions.
+ corner of the viewport with the button below.<br>
+Also try to use the scrollbars to test the method for different positions.Return the top-left corner of this element relative to the top left corner of the viewport with the button below.<br>
+Also try to use the scrollbars to test the method for different positions.
+ corner of the viewport with the button below.<br>
+Also try to use the scrollbars to test the method for different positions.
+ corner of the viewport with the button below.<br>
+Also try to use the scrollbars to test the method for different positions.
+
+tton below.<br>
+Also try to use the scrollbars to test the method for different positions.
+</div>
+
+<div style="width:1000px; height:1000px;"></div>
+<!-- </div> -->
+<br>
+<button onclick="myFunction()">Get top-left corner + witdth and height of the element with red border</button>
+
+<script>
+
+document.addEventListener('scroll', myFunction);
+function myFunction() {
+  var div = document.getElementById("myDiv");
+  var div1 = document.getElementById("myDiv1");
+  var allElements = document.querySelectorAll('.help');
+  var elmIndex = 1;
+  for (var i=0; i < allElements.length; i++) {
+    elmIndex = 1;
+    let myrect = allElements[i].getBoundingClientRect();
+    let elmlngt = allElements[i].clientHeight;
+    elmlngt = -parseInt(elmlngt);
+    if (myrect.top > elmlngt + 8 && myrect.top <= 8) {
+      allElements[i].classList.add('green');
+      elmIndex += i;
+      console.log("elm" + elmIndex + "inviewport");
+    } else {
+      allElements[i].classList.remove('green');
+      console.log("Class Removed From elm " + (i + 1));
+    }
+    
+  }
+  
+  
+}
+</script>
+</body>
+</html>
